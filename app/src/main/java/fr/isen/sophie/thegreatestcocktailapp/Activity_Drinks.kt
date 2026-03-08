@@ -14,10 +14,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavHostController
 import fr.isen.sophie.thegreatestcocktailapp.ui.theme.TheGreatestCocktailAppTheme
 
-class Activity_Drinks(navController: NavHostController, category: String) : ComponentActivity() {
+class Activity_Drinks : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -34,7 +33,6 @@ class Activity_Drinks(navController: NavHostController, category: String) : Comp
 
 @Composable
 fun DrinksScreen(category: String) {
-
     val drinks = when (category) {
         "Beer" -> listOf(
             "Heineken", "Corona", "Guinness", "Desperados",
